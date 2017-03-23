@@ -1,0 +1,22 @@
+<div class="sidebar well">
+	<img class="img-responsive img-rounded" src="{{ site.baseurl}}/images/pic.jpeg" alt="">
+</div>
+
+<div class="sidebar well">
+	Statisitcs Ph.D. Student <br>
+		University of Wisconsin - Madison<br>
+        Email: peigen@stat.wisc.edu
+</div>
+
+<div class="sidebar well">
+{% include links-list.html %}
+</div>
+
+<div class="sidebar well">
+    <h1>Recent Posts <a style="font-size: 13px !important; float: right;" href="{{ site.baseurl }}/feed.xml">RSS</a></h1>
+    <ul>
+        {% for post in site.posts limit:5 %}
+          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
